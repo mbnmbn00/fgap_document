@@ -23,6 +23,34 @@ Installation
 1. Download and install fGAP
 ^^^^^^^^^^^^^^^
 
+^^^^^^^^^^^^^^^^
+3. Prerequisites
+^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^
+4. Prerequisites
+^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^
+5. Prerequisites
+^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^
+6. Prerequisites
+^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^
+7. Prerequisites
+^^^^^^^^^^^^^^^^
+
 -----------------
 Usage and options
 -----------------
+
+===
+hah
+===
+
+----
+haha
+----
