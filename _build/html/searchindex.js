@@ -1,0 +1,1 @@
+Search.setIndex({envversion:46,filenames:["index","intro"],objects:{},objnames:{},objtypes:{},terms:{content:0,hihi:[],index:0,introduct:0,modul:0,page:0,search:0},titles:["Welcome to fGAP&#8217;s documentation!","Introduction"],titleterms:{document:0,fgap:0,indic:0,introduct:1,tabl:0,welcom:0}})
