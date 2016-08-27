@@ -2,55 +2,31 @@
 fGAP documentation
 ==================
 
-fGAP (fungal Genome Annotation Pipeline) performs gene prediction on given genome assembly and transcriptomic reads
+fGAP (fungal Genome Annotation Pipeline) performs gene prediction on given genome assembly and transcriptomic reads.
+
+Source code is available via `GitHub <https://github.com/mbnmbn00/fgap_document>`_
 
 
 -------
 Lisence
 -------
+
 fGAP is freely available only for non-commercial user. Please contact igchoi@korea.ac.kr for purchasing lisence for commercial usage.
 
 
-------------
-Installation
-------------
+-------
+Contact
+-------
 
-^^^^^^^^^^^^^^^^
-0. Prerequisites
-^^^^^^^^^^^^^^^^
+Byoungnam Min: mbnmbn00@korea.ac.kr
+Prof. In-Goel Choi: igchoi@korea.ac.kr
 
-^^^^^^^^^^^^^^^
-1. Download and install fGAP
-^^^^^^^^^^^^^^^
+.. toctree::
+   :hidden:
+   :maxdepth: 2
 
-^^^^^^^^^^^^^^^^
-3. Prerequisites
-^^^^^^^^^^^^^^^^
-
-^^^^^^^^^^^^^^^^
-4. Prerequisites
-^^^^^^^^^^^^^^^^
-
-^^^^^^^^^^^^^^^^
-5. Prerequisites
-^^^^^^^^^^^^^^^^
-
-^^^^^^^^^^^^^^^^
-6. Prerequisites
-^^^^^^^^^^^^^^^^
-
-^^^^^^^^^^^^^^^^
-7. Prerequisites
-^^^^^^^^^^^^^^^^
-
------------------
-Usage and options
------------------
-
-===
-hah
-===
-
-----
-haha
-----
+   installation
+   usage
+   working_principle
+   benchmark
+   citation
