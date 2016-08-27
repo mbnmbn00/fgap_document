@@ -1,22 +1,28 @@
-.. fGAP documentation master file, created by
-   sphinx-quickstart on Sat Aug 27 18:55:55 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to fGAP's documentation!
-================================
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-
-
-Indices and tables
+==================
+fGAP documentation
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+fGAP (fungal Genome Annotation Pipeline) performs gene prediction on given genome assembly and transcriptomic reads
 
+
+-------
+Lisence
+-------
+fGAP is freely available only for non-commercial user. Please contact igchoi@korea.ac.kr for commercial usage.
+
+
+------------
+Installation
+------------
+
+^^^^^^^^^^^^^^^^
+0. Prerequisites
+^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^
+1. Download and install fGAP
+^^^^^^^^^^^^^^^
+
+-----------------
+Usage and options
+-----------------
