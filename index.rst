@@ -13,18 +13,11 @@ License
 
 fGAP is only freely available for non-commercial users. Please contact igchoi@korea.ac.kr for purchaing license for commercial usage.
 
-Contents:
+Installation
+------------
 
-.. toctree::
-   :maxdepth: 2
+haha
+^^^^
 
-   intro
-   tmp
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+hoho
+^^^^
