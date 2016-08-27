@@ -341,7 +341,7 @@ import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme_options = {
-    'collapse_navigation': True,
-    'display_version': True,
+    'collapse_navigation': False,
+    'display_version': False,
     'navigation_depth': 2,
 }
