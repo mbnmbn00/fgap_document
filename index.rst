@@ -8,7 +8,7 @@ fGAP (fungal Genome Annotation Pipeline) performs gene prediction on given genom
 -------
 Lisence
 -------
-fGAP is freely available only for non-commercial user. Please contact igchoi@korea.ac.kr for commercial usage.
+fGAP is freely available only for non-commercial user. Please contact igchoi@korea.ac.kr for purchasing lisence for commercial usage.
 
 
 ------------
