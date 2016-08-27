@@ -340,8 +340,5 @@ texinfo_documents = [
 import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_options = {
-    'collapse_navigation': False,
-    'display_version': False,
-    'navigation_depth': 2,
-}
+html_theme_options = {'collapse_navigation': True}
+using_rtd_theme = True
