@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # fGAP documentation build configuration file, created by
-# sphinx-quickstart on Sat Aug 27 17:44:24 2016.
+# sphinx-quickstart on Sat Aug 27 18:55:55 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -336,3 +336,7 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #
 # texinfo_no_detailmenu = False
+
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]

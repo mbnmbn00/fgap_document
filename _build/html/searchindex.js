@@ -1,1 +1,0 @@
-Search.setIndex({envversion:49,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{},titles:["Welcome to fGAP&#8217;s documentation!"],titleterms:{content:0,document:0,fgap:0,hah:0,haha:0,welcom:0}})
