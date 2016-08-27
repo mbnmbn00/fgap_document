@@ -18,8 +18,8 @@ fGAP is freely available only for non-commercial user. Please contact igchoi@kor
 Contact
 -------
 
-Byoungnam Min: mbnmbn00@korea.ac.kr
-Prof. In-Goel Choi: igchoi@korea.ac.kr
+- Byoungnam Min: mbnmbn00@korea.ac.kr
+- Prof. In-Goel Choi: igchoi@korea.ac.kr
 
 .. toctree::
    :hidden:

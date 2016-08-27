@@ -6,3 +6,6 @@ Installation
 0. Pre-requisites
 -----------------
 
+---------------
+1. Install fGAP
+---------------
