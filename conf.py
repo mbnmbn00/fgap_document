@@ -337,8 +337,13 @@ texinfo_documents = [
 #
 # texinfo_no_detailmenu = False
 
-import sphinx_rtd_theme
-html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_options = {'collapse_navigation': True}
-using_rtd_theme = True
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+  html_theme = 'sphinx_rtd_theme'
+  html_style = None
+  html_theme_options = {'collapse_navigation': True}
+  using_rtd_theme = True
+else:
+  import sphinx_rtd_theme
+  html_theme = "sphinx_rtd_theme"
+  html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
