@@ -10,9 +10,9 @@ fGAP requires several softwares installed before running the command. We provide
 
 - :ref:`BeforeWeStart`
 - :ref:`Hisat2`
-- Trinity
-- Maker2
-- RepeatModeller
+- :ref:`Trinity`
+- :ref:`Maker2`
+- :ref:`RepeatModeler`
 - Braker1
 - Augustus
 - BUSCO
@@ -52,7 +52,7 @@ Install Hisat2 version 2.0.2-beta using github ::
     # Edit ~/.bashrc
     vim ~/.bashrc
     # Add following line
-    export PATH=$PATH:$HOME/fGAP/hisat2
+    export PATH=$PATH:$HOME/fGAP/tools/hisat2
     # Save, exit, and apply the change
     source ~/.bashrc
 
@@ -117,6 +117,10 @@ Install Maker v2.31.8. Please note that you need the proper license to use Maker
     # Add following lines
     export PATH=$PATH:$HOME/fGAP/tools/maker/bin
     export PATH=$PATH:$HOME/fGAP/tools/maker/exe/snap
+    # Save, exit, and apply the changes
+    source ~/.bashrc
+    # Check installation
+    which maker
 
     # Configure RepeatMasker
     # First download repbase manually at http://www.girinst.org/server/RepBase/index.php
@@ -162,17 +166,99 @@ Install RepeatModeler and its dependencies ::
     # Check perl version (ensure version > 5.8.8)
     perl -v
 
-    # RepeatMasker & libraries (>4.0.5)
-
-
-    # RepeatMasker 
+    # RECON - De Novo Repeat Finder 
+    cd $HOME/fGAP/tools/
     wget http://www.repeatmasker.org/RECON-1.08.tar.gz
     tar -zxvf RECON-1.08.tar.gz
     cd RECON-1.08/src/
     make
     make install
-    cd ../../
-    mv RECON-1.08 /csbl/tool/ngs/
+
+    # RepeatScout - De Novo Repeat Finder
+    cd $HOME/fGAP/tools/
+    wget http://repeatscout.bioprojects.org/RepeatScout-1.0.5.tar.gz
+    tar -zxvf RepeatScout-1.0.5.tar.gz
+    cd RepeatScout-1
+    make
+
+    # Now install RepeatModeler
+    cd $HOME/fGAP/tools/
+    wget http://www.repeatmasker.org/RepeatModeler-open-1-0-8.tar.gz
+    tar -zxvf RepeatModeler-open-1-0-8.tar.gz
+    cd RepeatModeler/
+    perl ./configure
+
+    # **REPEATMASKER INSTALLATION PATH**
+    # This is the path to the location where
+    # the RepeatMasker program suite can be found.
+    # Enter path [  ]:
+    $HOME/fGAP/maker/exe/RepeatMasker/
+
+    # **RECON INSTALLATION PATH**
+    # This is the path to the location where
+    # the RECON program suite can be found.
+    # Enter path [  ]:
+    $HOME/fGAP/tools/RECON-1.08/bin
+
+    # **RepeatScout INSTALLATION PATH**
+    # This is the path to the location where
+    # the RepeatScout program suite can be found.
+    # Enter path [  ]:
+    $HOME/fGAP/tools/RepeatScout-1/
+
+    # **TRF INSTALLATION PATH**
+    # This is the path to the location where
+    # the TRF program can be found.
+    # Enter path [  ]:
+    $HOME/fGAP/maker/exe/RepeatMasker
+
+    # Add a Search Engine:
+    # 1. RMBlast - NCBI Blast with RepeatMasker extensions: [ Un-configured ]
+    # 2. WUBlast/ABBlast: [ Un-configured ]
+
+    # 3. Done
+    # Enter Selection:
+    1
+
+    # **RMBlast (rmblastn) INSTALLATION PATH**
+    # This is the path to the location where
+    # the rmblastn and makeblastdb programs can be found.
+    # Enter path [  ]:
+    $HOME/fGAP/maker/exe/RepeatMasker/rmblast/bin
+
+    # Edit ~/.bashrc
+    vim ~/.bashrc
+    # Add following line
+    export PATH=$PATH:$HOME/fGAP/tools/RepeatModeler
+    # Save, exit, and apply the change
+    source ~/.bashrc
+
+    # Check installation
+    which RepeatModeler
+
+.. _Braker1:
+
+^^^^^^^^^^^^^^^^^^^^
+Braker1 installation
+^^^^^^^^^^^^^^^^^^^^
+
+**Braker1** is an unsupervised RNA-Seq-based genome annotation with GeneMark-ET and AUGUSTUS.
+
+http://exon.gatech.edu/genemark/braker1.html
+
+Install Braker1 and its dependencies. ::
+
+    # GeneMark-ET - You must download manually via web
+    # http://exon.gatech.edu/GeneMark/license_download.cgi
+    # Downloaded file name should be like *gm_et_linux_64.tar.gz*
+    tar -zxvf gm_et_linux_64.tar.gz
+    cp gm_et_linux_64 /csbl/tool/ngs/ -r
+    vim ~/.bashrc
+
+
+
+
+
 
 ---------------
 1. Install fGAP
