@@ -39,8 +39,26 @@ We will install all dependencies at $HOME/fgap/tools, so create the directory fi
 Hisat2 installation
 ^^^^^^^^^^^^^^^^^^^
 
+*Hisat2* is an alignment program for mapping next-generation sequencing reads  to a population of human genomes (as well as against a single reference genome)
 
+http://ccb.jhu.edu/software/hisat2/index.shtml
 
+Install Hisat2 using github ::
+
+    cd $HOME/fGAP/tools
+    git clone https://github.com/infphilo/hisat2.git
+    cd hisat2
+    make
+
+    # Edit ~/.bashrc
+    vim ~/.bashrc
+    # Add following line
+    export PATH=$PATH:$HOME/fGAP/hisat2
+    # Save and exit, and apply the change
+    source ~/.bashrc
+
+    # Check installation
+    which hisat2
 
 ---------------
 1. Install fGAP
