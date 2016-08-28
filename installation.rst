@@ -30,9 +30,7 @@ Before we start
 We will install all dependencies at ``$HOME/fgap/tools``, so create the directory first. ::
 
     cd $HOME
-    mkdir fGAP
-    cd fGAP
-    mkdir tools
+    mkdir -p fGAP/tools
 
 .. _Hisat2:
 
@@ -54,7 +52,7 @@ Install Hisat2 using github ::
     # Edit ~/.bashrc
     vim ~/.bashrc
     # Add following line
-    export PATH=$PATH:$HOME/fGAP/hisat2
+    *export PATH=$PATH:$HOME/fGAP/hisat2*
     # Save and exit, and apply the change
     source ~/.bashrc
 
