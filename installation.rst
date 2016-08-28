@@ -26,7 +26,7 @@ fGAP requires several softwares installed before running the command. We provide
 Before we start
 ^^^^^^^^^^^^^^^
 
-We will install all dependencies at $HOME/fgap/tools, so create the directory first.:
+We will install all dependencies at $HOME/fgap/tools, so create the directory first. ::
 
     cd $HOME
     mkdir fGAP
