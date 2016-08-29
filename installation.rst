@@ -421,6 +421,10 @@ Install InterProScan. ::
 
 .. _pythonModules:
 
+^^^^^^^^^^^^^^^^^^^^^^
+Install Python modules
+^^^^^^^^^^^^^^^^^^^^^^
+
 fGAP requires several python modules and they can be installed by *pip*. ::
 
     # Install pip
