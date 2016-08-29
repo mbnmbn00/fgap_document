@@ -13,13 +13,10 @@ fGAP requires several softwares installed before running the command. We provide
 - :ref:`Trinity`
 - :ref:`Maker2`
 - :ref:`RepeatModeler`
-- Braker1
-- Augustus
-- BUSCO
-- InterProScan
-- BLAST
-- Python modules
-
+- :ref:`Braker1`
+- :ref:`BUSCO`
+- :ref:`InterProScan`
+- :ref:`pythonModules`
 
 .. _BeforeWeStart:
 
@@ -42,7 +39,7 @@ Hisat2 installation
 
 http://ccb.jhu.edu/software/hisat2/index.shtml
 
-Install Hisat2 version 2.0.2-beta using github ::
+Install Hisat2 version 2.0.2-beta using github. ::
 
     cd $HOME/fGAP/tools
     git clone https://github.com/infphilo/hisat2.git
@@ -67,7 +64,7 @@ Trinity installation
 
 **Trinity** performs efficient and robust *de novo* reconstruction of transcriptomes from RNA-seq data.
 
-Install Trinity v2.2.0 using github ::
+Install Trinity v2.2.0 using github. ::
 
     cd $HOME/fGAP/tools
     git clone https://github.com/trinityrnaseq/trinityrnaseq.git
@@ -84,7 +81,7 @@ Install Trinity v2.2.0 using github ::
     # Check installation
     which Trinity
 
-.. _Maker:
+.. _Maker2:
 
 ^^^^^^^^^^^^^^^^^^^
 Maker2 installation
@@ -161,7 +158,7 @@ RepeatModeler installation
 
 http://www.repeatmasker.org/RepeatModeler.html
 
-Install RepeatModeler and its dependencies ::
+Install RepeatModeler and its dependencies. ::
 
     # Check perl version (ensure version > 5.8.8)
     perl -v
@@ -248,18 +245,199 @@ http://exon.gatech.edu/genemark/braker1.html
 
 Install Braker1 and its dependencies. ::
 
+    #
+    ## Install GeneMark-ET
+    #
+    cd $HOME/fGAP/tools/
     # GeneMark-ET - You must download manually via web
     # http://exon.gatech.edu/GeneMark/license_download.cgi
-    # Downloaded file name should be like *gm_et_linux_64.tar.gz*
+    # Downloaded file name should be like gm_et_linux_64.tar.gz
+    # Move the file to $HOME/fGAP/tools
     tar -zxvf gm_et_linux_64.tar.gz
-    cp gm_et_linux_64 /csbl/tool/ngs/ -r
+
+    # Edit ~/.bashrc
     vim ~/.bashrc
+    # Add following line
+    export PATH=$PATH:$HOME/fGAP/tools/gm_et_linux_64/gmes_petap
+    # Save, exit, and apply the change
+    source ~/.bashrc
 
+    # Check installation
+    which gmes_petap.pl
 
+    # Download gm_key_64.gz
+    gunzip gm_key_64.gz
+    mv gm_key_64 ~/.gm_key
 
+    #
+    ## Install AUGUSTUS
+    #
+    cd $HOME/fGAP/tools/
+    wget http://bioinf.uni-greifswald.de/augustus/binaries/augustus-3.2.1.tar.gz
+    tar -zxvf augustus-3.2.1.tar.gz
+    cd augustus-3.2.1/src
+    make
 
+    # Edit ~/.bashrc
+    vim ~/.bashrc
+    # Add following lines
+    export AUGUSTUS_CONFIG_PATH=$HOME/fGAP/tools/augustus-3.2.1/config/
+    export PATH="$PATH:$HOME/fGAP/tools/augustus-3.2.1/bin"
+    # Save, exit, and apply the change
+    source ~/.bashrc
 
+    #
+    ## Perl modules
+    #
+    sudo cpan YAML
+    sudo cpan App::cpanminus
+    sudo cpanm File::Spec::Functions
+    sudo cpanm Hash::Merge
+    sudo cpanm List::Util
+    sudo cpanm Logger::Simple
+    sudo cpanm Module::Load::Conditional
+    sudo cpanm Parallel::ForkManager
+    sudo cpanm POSIX
+    sudo cpanm Scalar::Util::Numeric
+    sudo cpanm YAML
+
+    #
+    ## Install bamtools
+    #
+    sudo apt-get install zlib1g-dev
+    cd $HOME/fGAP/tools/
+    git clone https://github.com/pezmaster31/bamtools.git
+    mkdir build
+    cd build
+    cmake ..
+    make
+
+    # Edit ~/.bashrc
+    vim ~/.bashrc
+    # Add following lines
+    export PATH=$PATH:$HOME/fGAP/tools/bamtools/bin
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/fGAP/tools/bamtools/lib
+    # Save, exit, and apply the change
+    source ~/.bashrc
+
+    # Check installation
+    which augustus
+
+    #
+    ## Install BRAKER1
+    #
+    cd $HOME/fGAP/tools/
+    wget http://exon.gatech.edu/GeneMark/Braker/BRAKER1.tar.gz
+    tar -zxvf BRAKER1.tar.gz
+
+    # Edit ~/.bashrc
+    vim ~/.bashrc
+    # Add following lines
+    export PATH=$PATH:$HOME/fGAP/tools/BRAKER1
+    export BAMTOOLS_PATH=$HOME/fGAP/tools/bamtools/bin
+    export GENEMARK_PATH=$HOME/fGAP/tools/gm_et_linux_64/gmes_petap
+    # Save, exit, and apply the change
+    source ~/.bashrc
+
+    # Check installation
+    which braker.pl
+
+.. _BUSCO:
+
+^^^^^^^^^^^^^^^^^^
+BUSCO installation
+^^^^^^^^^^^^^^^^^^
+
+**BUSCO**: Benchmarking Universal Single-Copy Orthologs
+
+http://busco.ezlab.org/
+
+Install BUSCO v1.1b and its dependencies. ::
+
+    #
+    ## Install NCBI BLAST+
+    #
+    cd $HOME/fGAP/tools/
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.4.0+-x64-linux.tar.gz
+    tar -zxvf ncbi-blast-2.4.0+-x64-linux.tar.gz
+
+    # Edit ~/.bashrc
+    vim ~/.bashrc
+    # Add following lines
+    export PATH=$PATH:$HOME/fGAP/tools/ncbi-blast-2.4.0+/bin
+    # Save, exit, and apply the change
+    source ~/.bashrc
+
+    # Check installation
+    which blastp
+
+    #
+    ## Install BUSCO
+    #
+    cd $HOME/fGAP/tools/
+    wget http://busco.ezlab.org/files/fungi_buscos.tar.gz
+    wget http://busco.ezlab.org/files/BUSCO_v1.1b1.tar.gz
+    tar -zxvf fungi_buscos.tar.gz
+    tar -zxvf BUSCO_v1.1b1.tar.gz
+    mv fungi BUSCO_v1.1b1
+
+    # !!IMPORTANT!!
+    # Edit first line of BUSCO_v1.1b1.py
+    cd $HOME/fGAP/tools/BUSCO_v1.1b1
+    vim BUSCO_v1.1b1.py
+    # Replace first line with
+    #!/usr/bin/python3
+    # Save, exit, and give permission to execute
+    chmod +x BUSCO_v1.1b1.py
+
+    # Finally check installation
+    which BUSCO_v1.1b1.py
+
+.. _InterProScan:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+InterProScan installation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**InterProScan** scans a sequence for matches against the InterPro protein signature databases.
+
+https://github.com/ebi-pf-team/interproscan/wiki
+
+Install InterProScan. ::
+
+    cd $HOME/fGAP/tools/
+    wget ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.18-57.0/interproscan-5.18-57.0-64-bit.tar.gz
+    tar -zxvf interproscan-5.18-57.0-64-bit.tar.gz
+
+    # Edit .bashrc
+    vim ~/.bashrc
+    # Add following lines
+    export PATH=$PATH:$HOME/fGAP/tools/interproscan-5.18-57.0
+    # Save, exit, and apply the change
+    source ~/.bashrc
+
+    # Check installation
+    which interproscan.sh
+
+.. _pythonModules:
+
+fGAP requires several python modules and they can be installed by *pip*. ::
+
+    # Install pip
+    sudo apt-get install python-pip
+
+    # Install needed modules
+    sudo pip install biopython
+    sudo pip install numpy
+    sudo pip install intervaltree
 
 ---------------
 1. Install fGAP
 ---------------
+
+fGAP is a set of python scripts that connect softwares as well as operate its own algorithm. Downloading fGAP is enough to go. ::
+
+    cd $HOME/fGAP/
+    git clone https://github.com/mbnmbn00/fgap_document
+
+Now, you are ready to run fGAP. See `Usage <http://fgap-document.readthedocs.io/en/latest/usage.html>`_.
