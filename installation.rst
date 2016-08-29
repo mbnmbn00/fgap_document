@@ -444,4 +444,4 @@ fGAP is a set of python scripts that connect softwares as well as operate its ow
     cd $HOME/fGAP/
     git clone https://github.com/mbnmbn00/fgap_document
 
-Now, you are ready to run fGAP. See :doc:`/usage`
+Now, you are ready to run fGAP. See :doc:`Usage </usage>`
