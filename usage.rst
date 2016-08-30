@@ -64,36 +64,75 @@ Usage::
 
 - Augustus species: you should provide one augustus_species used in Augustus. This is the list what this software provides.
 
-+-------------+----------------+-----------------------+-----------------------+
-| Phylum      | Class          | Species               | augustus_species      |
-+=============+================+=======================+=======================+
-| Ascomycota  | Eurotiomycetes | Aspergillus fumigatus | aspergillus_fumigatus |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Eurotiomycetes | Aspergillus nidulans  | aspergillus_nidulans  |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Eurotiomycetes | Aspergillus oryzae    | aspergillus_oryzae    |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Eurotiomycetes | Aspergillus terreus   | aspergillus_terreus   |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Leotiomycetes  | Botrytis cinerea      | botrytis_cinerea      |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Saccharomycetes| Candida albicans      | candida_albicans      |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Saccharomycetes| Candida guilliermondii| candida_guilliermondii|
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Saccharomycetes| Candida tropicalis    | candida_tropicalis    |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Sordariomycetes| Chaetomium globosum   | chaetomium_globosum   |
-+-------------+----------------+-----------------------+-----------------------+
-| Ascomycota  | Eurotiomycetes | Coccidioides immitis  | coccidioides_immitis  |
-+-------------+----------------+-----------------------+-----------------------+
-|Basidiomycota| Agaricomycetes | Coprinus cinereus     | coprinus              |
-+-------------+----------------+-----------------------+-----------------------+
-|Basidiomycota| Agaricomycetes | Coprinus cinereus     | coprinus_cinereus     |
-+-------------+----------------+-----------------------+-----------------------+
-|Basidiomycota| Agaricomycetes | Cryptococcus neoforma |cryptococcus_neoformans|
-|             |                | ns gattii             |_gattii                |
-+-------------+----------------+-----------------------+-----------------------+
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Phylum         | Class                 | Species                        | augustus_species                         |
++================+=======================+================================+==========================================+
+| Ascomycota     | Eurotiomycetes        | Aspergillus fumigatus          | aspergillus_fumigatus                    |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Eurotiomycetes        | Aspergillus nidulans           | aspergillus_nidulans                     |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Eurotiomycetes        | Aspergillus oryzae             | aspergillus_oryzae                       |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Eurotiomycetes        | Aspergillus terreus            | aspergillus_terreus                      |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Leotiomycetes         | Botrytis cinerea               | botrytis_cinerea                         |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Candida albicans               | candida_albicans                         |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Candida guilliermondii         | candida_guilliermondii                   |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Candida tropicalis             | candida_tropicalis                       |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Sordariomycetes       | Chaetomium globosum            | chaetomium_globosum                      |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Eurotiomycetes        | Coccidioides immitis           | coccidioides_immitis                     |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Basidiomycota  | Agaricomycetes        | Coprinus cinereus              | coprinus                                 |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Basidiomycota  | Agaricomycetes        | Coprinus cinereus              | coprinus_cinereus                        |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Basidiomycota  | Agaricomycetes        | Cryptococcus neoformans gattii | cryptococcus_neoformans_gattii           |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Basidiomycota  | Agaricomycetes        | Cryptococcus neoformans gattii | cryptococcus_neoformans_neoformans_B     |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Basidiomycota  | Agaricomycetes        | Cryptococcus neoformans gattii | cryptococcus_neoformans_neoformans_JEC21 |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Debaryomyces hansenii          | debaryomyces_hansenii                    |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Microsporidia  | -                     | Encephalitozoon cuniculi       | encephalitozoon_cuniculi_GB              |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Eremothecium gossypii          | eremothecium_gossypii                    |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Sordariomycetes       | Fusarium graminearum           | fusarium_graminearum                     |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Eurotiomycetes        | Histoplasma capsulatum         | histoplasma_capsulatum                   |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Kluyveromyces lactis           | kluyveromyces_lactis                     |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Basidiomycota  | Agaricomycetes        | Laccaria bicolor               | laccaria_bicolor                         |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Lodderomyces elongisporus      | lodderomyces_elongisporus                |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Sordariomycetes       | Magnaporthe grisea             | magnaporthe_grisea                       |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Sordariomycetes       | Neurospora crassa              | neurospora_crassa                        |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+|Basidiomycota   | Agaricomycetes        | Phanerochaete chrysosporium    | phanerochaete_chrysosporium              |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Pichia stipitis                | pichia_stipitis                          |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Mucoromycotina | Mucorales             | Rhizopus oryzae                | rhizopus_oryzae                          |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Saccharomyces cerevisiae       | saccharomyces_cerevisiae_S288C           |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Saccharomyces cerevisiae       | saccharomyces_cerevisiae_rm11-1a_1       |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Schizosaccharomycetes | Schizosaccharomyces pombe      | schizosaccharomyces_pombe                |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Basidiomycota  | Ustilaginomycetes     | Ustilago maydis                | ustilago_maydis                          |
++----------------+-----------------------+--------------------------------+------------------------------------------+
+| Ascomycota     | Saccharomycetes       | Yarrowia lipolytica            | yarrowia_lipolytica                      |
++----------------+-----------------------+--------------------------------+------------------------------------------+
 
 ---------
 3. Output
