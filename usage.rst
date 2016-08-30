@@ -31,7 +31,7 @@ Example command::
 
 All taxon levels are allowed for *--taxon* argument, but genus level is appropriate. Now make protein database::
 
-    cd sister_orgs
+    cd sister_orgs/
     gunzip *.faa.gz
     cat ./*faa > prot_db.faa
 
@@ -62,7 +62,7 @@ Usage::
      --sister_proteome <sister_proteome>\
      --num_cores <number_of_cpus_to_be_used>\
 
-- Augustus species: you should provide one augustus_species used in Augustus. This is the list what this software provides.
+- Augustus species: you should provide one augustus_species used in Augustus. This is the list what Augustus provides.
 
 +----------------+-----------------------+--------------------------------+------------------------------------------+
 | Phylum         | Class                 | Species                        | augustus_species                         |
@@ -134,12 +134,20 @@ Usage::
 | Ascomycota     | Saccharomycetes       | Yarrowia lipolytica            | yarrowia_lipolytica                      |
 +----------------+-----------------------+--------------------------------+------------------------------------------+
 
+- Organism ID will be used in naming gene ID
+
 ---------
 3. Output
 ---------
+
+Final output will be located in output directory you gave in the arguments
+
+- fgap_output_prot.faa
+- fgap_output.gff3
+- fgap_output_stats.html
 
 --------------------
 4. Trouble-shootings
 --------------------
 
-This is very beta version of software, so please don't hesistate reporting any bug or error you have encountered at mbnmbn00@korea.ac.kr or mbnmbn00@gmail.com.
+This is very beta version of the software, so please don't hesistate reporting any bug or error you have encountered at mbnmbn00@korea.ac.kr or mbnmbn00@gmail.com.
