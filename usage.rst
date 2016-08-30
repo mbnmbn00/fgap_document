@@ -64,23 +64,36 @@ Usage::
 
 - Augustus species: you should provide one augustus_species used in Augustus. This is the list what this software provides.
 
-+------------+----------------+-----------------------+-----------------------+
-| Phylum     | Class          | Species               | augustus_species      |
-+============+================+=======================+=======================+
-| Ascomycota | Eurotiomycetes | Aspergillus fumigatus | aspergillus_fumigatus |
-+------------+----------------+-----------------------+-----------------------+
-| Ascomycota | Eurotiomycetes | Aspergillus nidulans  | aspergillus_nidulans  |
-+------------+----------------+-----------------------+-----------------------+
-| Ascomycota | Eurotiomycetes | Aspergillus oryzae    | aspergillus_oryzae    |
-+------------+----------------+-----------------------+-----------------------+
-| Ascomycota | Eurotiomycetes | Aspergillus terreus   | aspergillus_terreus   |
-+------------+----------------+-----------------------+-----------------------+
-| Ascomycota | Leotiomycetes  | Botrytis cinerea      | botrytis_cinerea      |
-+------------+----------------+-----------------------+-----------------------+
-| Ascomycota | Saccharomycetes| Candida albicans      | candida_albicans      |
-+------------+----------------+-----------------------+-----------------------+
-
-
++-------------+----------------+-----------------------+-----------------------+
+| Phylum      | Class          | Species               | augustus_species      |
++=============+================+=======================+=======================+
+| Ascomycota  | Eurotiomycetes | Aspergillus fumigatus | aspergillus_fumigatus |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Eurotiomycetes | Aspergillus nidulans  | aspergillus_nidulans  |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Eurotiomycetes | Aspergillus oryzae    | aspergillus_oryzae    |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Eurotiomycetes | Aspergillus terreus   | aspergillus_terreus   |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Leotiomycetes  | Botrytis cinerea      | botrytis_cinerea      |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Saccharomycetes| Candida albicans      | candida_albicans      |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Saccharomycetes| Candida guilliermondii| candida_guilliermondii|
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Saccharomycetes| Candida tropicalis    | candida_tropicalis    |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Sordariomycetes| Chaetomium globosum   | chaetomium_globosum   |
++-------------+----------------+-----------------------+-----------------------+
+| Ascomycota  | Eurotiomycetes | Coccidioides immitis  | coccidioides_immitis  |
++-------------+----------------+-----------------------+-----------------------+
+|Basidiomycota| Agaricomycetes | Coprinus cinereus     | coprinus              |
++-------------+----------------+-----------------------+-----------------------+
+|Basidiomycota| Agaricomycetes | Coprinus cinereus     | coprinus_cinereus     |
++-------------+----------------+-----------------------+-----------------------+
+|Basidiomycota| Agaricomycetes |Cryptococcus neoformans|cryptococcus_neoformans|
+|             |                | gattii                |_gattii
++-------------+----------------+-----------------------+-----------------------+
 
 ---------
 3. Output
