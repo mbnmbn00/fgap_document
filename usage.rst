@@ -65,10 +65,9 @@ Usage::
 - Augustus species: you should provide one augustus_species used in Augustus. This is the list what this software provides.
 
 +------------------------+------------+----------+----------+
-| Header row, column 1   | Header 2   | Header 3 | Header 4 |
-| (header rows optional) |            |          |          |
+| Phylum | Class | Species | augustus_species |
 +========================+============+==========+==========+
-| body row 1, column 1   | column 2   | column 3 | column 4 |
+| Ascomycota | Eurotiomycetes | Aspergillus fumigatus | aspergillus_fumigatus |
 +------------------------+------------+----------+----------+
 | body row 2             | ...        | ...      |          |
 +------------------------+------------+----------+----------+
