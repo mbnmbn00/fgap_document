@@ -99,7 +99,7 @@ Usage::
 +----------------+-----------------------+--------------------------------+------------------------------------------+
 | Ascomycota     | Saccharomycetes       | Debaryomyces hansenii          | debaryomyces_hansenii                    |
 +----------------+-----------------------+--------------------------------+------------------------------------------+
-| Microsporidia  | -                     | Encephalitozoon cuniculi       | encephalitozoon_cuniculi_GB              |
+| Microsporidia  |                       | Encephalitozoon cuniculi       | encephalitozoon_cuniculi_GB              |
 +----------------+-----------------------+--------------------------------+------------------------------------------+
 | Ascomycota     | Saccharomycetes       | Eremothecium gossypii          | eremothecium_gossypii                    |
 +----------------+-----------------------+--------------------------------+------------------------------------------+
