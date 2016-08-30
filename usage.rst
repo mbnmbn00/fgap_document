@@ -69,8 +69,18 @@ Usage::
 +============+================+=======================+=======================+
 | Ascomycota | Eurotiomycetes | Aspergillus fumigatus | aspergillus_fumigatus |
 +------------+----------------+-----------------------+-----------------------+
-| body row 2 | ...            | ...                   |                       |
+| Ascomycota | Eurotiomycetes | Aspergillus nidulans  | aspergillus_nidulans  |
 +------------+----------------+-----------------------+-----------------------+
+| Ascomycota | Eurotiomycetes | Aspergillus oryzae    | aspergillus_oryzae    |
++------------+----------------+-----------------------+-----------------------+
+| Ascomycota | Eurotiomycetes | Aspergillus terreus   | aspergillus_terreus   |
++------------+----------------+-----------------------+-----------------------+
+| Ascomycota | Leotiomycetes  | Botrytis cinerea      | botrytis_cinerea      |
++------------+----------------+-----------------------+-----------------------+
+| Ascomycota | Saccharomycetes| Candida albicans      | candida_albicans      |
++------------+----------------+-----------------------+-----------------------+
+
+
 
 ---------
 3. Output
