@@ -91,8 +91,8 @@ Usage::
 +-------------+----------------+-----------------------+-----------------------+
 |Basidiomycota| Agaricomycetes | Coprinus cinereus     | coprinus_cinereus     |
 +-------------+----------------+-----------------------+-----------------------+
-|Basidiomycota| Agaricomycetes |Cryptococcus neoformans|cryptococcus_neoformans|
-|             |                | gattii                |_gattii                |
+|Basidiomycota| Agaricomycetes | Cryptococcus neoforma |cryptococcus_neoformans|
+|             |                | ns gattii             |_gattii                |
 +-------------+----------------+-----------------------+-----------------------+
 
 ---------
