@@ -9,7 +9,7 @@ Installation
 fGAP requires several softwares installed before running the command. We provide simple installation guide for each software. The guide was intensely tested in Ubuntu 14.04 LTS (Unfortunately, we do not provide the supports for other platforms including Windows, OS X, or other Linux distributions in this version).
 
 - :ref:`DownloadFGAP`
-- :ref:`Hisat2`
+- :ref:`Blast`
 - :ref:`Trinity`
 - :ref:`Maker2`
 - :ref:`RepeatModeler`
@@ -28,6 +28,16 @@ Download fGAP using GitHub ``clone``. Suppose we are installing fGAP in your ``$
 
     cd $HOME
     git clone https://github.com/mbnmbn00/fGAP.git
+
+.. _Blast:
+
+^^^^^^^^^^^^^^^^^^^^
+BLAST+ installatioon
+^^^^^^^^^^^^^^^^^^^^
+
+BLAST+ is used in Maker and BUSCO running. ::
+
+    sudo apt-get install ncbi-blast+
 
 .. _Trinity:
 
@@ -71,21 +81,11 @@ Install Maker v2.31.8. Please note that you need a proper license to use Maker2 
     ./Build installexes
     ./Build install
 
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following lines
-    export PATH=$PATH:$HOME/fGAP/tools/maker/bin
-    export PATH=$PATH:$HOME/fGAP/tools/maker/exe/snap
-    # Save, exit, and apply the changes
-    source ~/.bashrc
-    # Check installation
-    which maker
-
     # Configure RepeatMasker
     # First download repbase manually at http://www.girinst.org/server/RepBase/index.php
-    # And move it to $HOME/fGAP/maker/exe/RepeatMasker/
+    # Then move it to $HOME/fGAP/maker/exe/RepeatMasker/
     tar -zxvf repeatmaskerlibraries-20150807.tar.gz # Or whatever you downloaded
-    cd $HOME/fGAP/tools/exe/RepeatMasker/
+    cd $HOME/fGAP/tools/maker_2.31.8/exe/RepeatMasker/
     ./configure
 
     # **TRF PROGRAM**
@@ -108,7 +108,7 @@ Install Maker v2.31.8. Please note that you need a proper license to use Maker2 
     # This is the path to the location where
     # the rmblastn and makeblastdb programs can be found.
     # Enter path [  ]:
-    $HOME/fGAP/maker/exe/RepeatMasker/rmblast/bin
+    $HOME/fGAP/maker_2.31.8/exe/RepeatMasker/rmblast/bin
 
 .. _RepeatModeler:
 
@@ -124,21 +124,6 @@ Install RepeatModeler and its dependencies. ::
 
     # Check perl version (ensure version > 5.8.8)
     perl -v
-
-    # RECON - De Novo Repeat Finder 
-    cd $HOME/fGAP/tools/
-    wget http://www.repeatmasker.org/RECON-1.08.tar.gz
-    tar -zxvf RECON-1.08.tar.gz
-    cd RECON-1.08/src/
-    make
-    make install
-
-    # RepeatScout - De Novo Repeat Finder
-    cd $HOME/fGAP/tools/
-    wget http://repeatscout.bioprojects.org/RepeatScout-1.0.5.tar.gz
-    tar -zxvf RepeatScout-1.0.5.tar.gz
-    cd RepeatScout-1
-    make
 
     # Now install RepeatModeler
     cd $HOME/fGAP/tools/
@@ -185,15 +170,6 @@ Install RepeatModeler and its dependencies. ::
     # Enter path [  ]:
     $HOME/fGAP/maker/exe/RepeatMasker/rmblast/bin
 
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following line
-    export PATH=$PATH:$HOME/fGAP/tools/RepeatModeler
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which RepeatModeler
 
 .. _Braker1:
 
@@ -207,50 +183,10 @@ http://exon.gatech.edu/genemark/braker1.html
 
 Install Braker1 and its dependencies. ::
 
-    #
-    ## Install GeneMark-ET
-    #
-    cd $HOME/fGAP/tools/
-    # GeneMark-ET - You must download manually via web
-    # http://exon.gatech.edu/GeneMark/license_download.cgi
-    # Downloaded file name should be like gm_et_linux_64.tar.gz
-    # Move the file to $HOME/fGAP/tools
-    tar -zxvf gm_et_linux_64.tar.gz
+    # Copy gm_key
+    cp $HOME/fGAP/tools/gm_et_linux_64/gm_key ~/.gm_key
 
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following line
-    export PATH=$PATH:$HOME/fGAP/tools/gm_et_linux_64/gmes_petap
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which gmes_petap.pl
-
-    # Download gm_key_64.gz
-    gunzip gm_key_64.gz
-    mv gm_key_64 ~/.gm_key
-
-    #
-    ## Install AUGUSTUS
-    #
-    cd $HOME/fGAP/tools/
-    wget http://bioinf.uni-greifswald.de/augustus/binaries/augustus-3.2.1.tar.gz
-    tar -zxvf augustus-3.2.1.tar.gz
-    cd augustus-3.2.1/src
-    make
-
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following lines
-    export AUGUSTUS_CONFIG_PATH=$HOME/fGAP/tools/augustus-3.2.1/config/
-    export PATH="$PATH:$HOME/fGAP/tools/augustus-3.2.1/bin"
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    #
-    ## Perl modules
-    #
+    # Perl modules
     sudo cpan YAML
     sudo cpan App::cpanminus
     sudo cpanm File::Spec::Functions
@@ -263,97 +199,8 @@ Install Braker1 and its dependencies. ::
     sudo cpanm Scalar::Util::Numeric
     sudo cpanm YAML
 
-    #
-    ## Install bamtools
-    #
+    # For bamtools
     sudo apt-get install zlib1g-dev
-    cd $HOME/fGAP/tools/
-    git clone https://github.com/pezmaster31/bamtools.git
-    mkdir build
-    cd build
-    cmake ..
-    make
-
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following lines
-    export PATH=$PATH:$HOME/fGAP/tools/bamtools/bin
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/fGAP/tools/bamtools/lib
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which augustus
-
-    #
-    ## Install BRAKER1
-    #
-    cd $HOME/fGAP/tools/
-    wget http://exon.gatech.edu/GeneMark/Braker/BRAKER1.tar.gz
-    tar -zxvf BRAKER1.tar.gz
-
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following lines
-    export PATH=$PATH:$HOME/fGAP/tools/BRAKER1
-    export BAMTOOLS_PATH=$HOME/fGAP/tools/bamtools/bin
-    export GENEMARK_PATH=$HOME/fGAP/tools/gm_et_linux_64/gmes_petap
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which braker.pl
-
-.. _BUSCO:
-
-^^^^^^^^^^^^^^^^^^
-BUSCO installation
-^^^^^^^^^^^^^^^^^^
-
-**BUSCO**: Benchmarking Universal Single-Copy Orthologs
-
-http://busco.ezlab.org/
-
-Install BUSCO v1.1b and its dependencies. ::
-
-    #
-    ## Install NCBI BLAST+
-    #
-    cd $HOME/fGAP/tools/
-    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.4.0+-x64-linux.tar.gz
-    tar -zxvf ncbi-blast-2.4.0+-x64-linux.tar.gz
-
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following lines
-    export PATH=$PATH:$HOME/fGAP/tools/ncbi-blast-2.4.0+/bin
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which blastp
-
-    #
-    ## Install BUSCO
-    #
-    cd $HOME/fGAP/tools/
-    wget http://busco.ezlab.org/files/fungi_buscos.tar.gz
-    wget http://busco.ezlab.org/files/BUSCO_v1.1b1.tar.gz
-    tar -zxvf fungi_buscos.tar.gz
-    tar -zxvf BUSCO_v1.1b1.tar.gz
-    mv fungi BUSCO_v1.1b1
-
-    # !!IMPORTANT!!
-    # Edit first line of BUSCO_v1.1b1.py
-    cd $HOME/fGAP/tools/BUSCO_v1.1b1
-    vim BUSCO_v1.1b1.py
-    # Replace first line with
-    #!/usr/bin/python3
-    # Save, exit, and give permission to execute
-    chmod +x BUSCO_v1.1b1.py
-
-    # Finally check installation
-    which BUSCO_v1.1b1.py
 
 .. _InterProScan:
 
@@ -371,16 +218,6 @@ Install InterProScan. ::
     wget ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.18-57.0/interproscan-5.18-57.0-64-bit.tar.gz
     tar -zxvf interproscan-5.18-57.0-64-bit.tar.gz
 
-    # Edit .bashrc
-    vim ~/.bashrc
-    # Add following lines
-    export PATH=$PATH:$HOME/fGAP/tools/interproscan-5.18-57.0
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which interproscan.sh
-
 .. _pythonModules:
 
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -397,13 +234,11 @@ fGAP requires several python modules and they can be installed by *pip*. ::
     sudo pip install numpy
     sudo pip install intervaltree
 
----------------
-1. Install fGAP
----------------
+.. _checkDependencies:
 
-fGAP is a set of python scripts that connect softwares as well as operate its own algorithm. Downloading fGAP is enough to go. ::
+You can check if fGAP is correctly installed.
 
-    cd $HOME/fGAP/
-    git clone https://github.com/mbnmbn00/fgap_document
+    python $HOME/fGAP/check_dependencies.py -o tmp
 
-Now, you are ready to run fGAP. See :doc:`Usage. </usage>`
+
+
