@@ -24,37 +24,10 @@ fGAP requires several softwares installed before running the command. We provide
 Download fGAP
 ^^^^^^^^^^^^^
 
-We will install all dependencies at ``$HOME/fgap/tools``, so create the directory first. :
+Download fGAP using GitHub ``clone``. Suppose we are installing fGAP in your ``$HOME`` directory, but you are free to change the location. ::
 
     cd $HOME
-    mkdir -p fGAP/tools
-
-.. _Hisat2:
-
-^^^^^^^^^^^^^^^^^^^
-Hisat2 installation
-^^^^^^^^^^^^^^^^^^^
-
-**Hisat2** is an alignment program for mapping next-generation sequencing reads  to a reference genome.
-
-http://ccb.jhu.edu/software/hisat2/index.shtml
-
-Install Hisat2 version 2.0.2-beta using github. ::
-
-    cd $HOME/fGAP/tools
-    git clone https://github.com/infphilo/hisat2.git
-    cd hisat2
-    make
-
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following line
-    export PATH=$PATH:$HOME/fGAP/tools/hisat2
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which hisat2
+    git clone https://github.com/mbnmbn00/fGAP.git
 
 .. _Trinity:
 
@@ -64,22 +37,12 @@ Trinity installation
 
 **Trinity** performs efficient and robust *de novo* reconstruction of transcriptomes from RNA-seq data.
 
-Install Trinity v2.2.0 using github. ::
+Download and Install Trinity v2.2.0 using github. ::
 
     cd $HOME/fGAP/tools
     git clone https://github.com/trinityrnaseq/trinityrnaseq.git
     cd trinityrnaseq
     make
-
-    # Edit ~/.bashrc
-    vim ~/.bashrc
-    # Add following line
-    export PATH=$PATH:$HOME/fGAP/trinityrnaseq
-    # Save, exit, and apply the change
-    source ~/.bashrc
-
-    # Check installation
-    which Trinity
 
 .. _Maker2:
 
@@ -91,13 +54,12 @@ Maker2 is an eay-to-use annotation pipeline designed for emerging model organism
 
 http://www.gmod.org/wiki/MAKER
 
-Install Maker v2.31.8. Please note that you need the proper license to use Maker2 (http://yandell.topaz.genetics.utah.edu/cgi-bin/maker_license.cgi). ::
+Install Maker v2.31.8. Please note that you need a proper license to use Maker2 (http://yandell.topaz.genetics.utah.edu/cgi-bin/maker_license.cgi). ::
 
     # Move to install directory
     cd $HOME/fGAP/tools/
 
-    # Download and unzip maker2
-    wget http://yandell.topaz.genetics.utah.edu/maker_downloads/5456/CA4F/CED4/052811E9418D53F8B67DDE88D5E2/maker-2.31.8.tgz # Use your own download
+    # Download and unzip maker2 named maker-2.31.8.tgz
     tar -zxvf maker-2.31.8.tgz
 
     # Install Maker2 pre-requisites
