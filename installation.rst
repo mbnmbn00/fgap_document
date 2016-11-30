@@ -14,7 +14,6 @@ fGAP requires several softwares installed before running the command. We provide
 - :ref:`Maker2`
 - :ref:`RepeatModeler`
 - :ref:`Braker1`
-- :ref:`BUSCO`
 - :ref:`InterProScan`
 - :ref:`pythonModules`
 
@@ -46,10 +45,11 @@ Trinity installation
 ^^^^^^^^^^^^^^^^^^^^
 
 **Trinity** performs efficient and robust *de novo* reconstruction of transcriptomes from RNA-seq data.
+https://github.com/trinityrnaseq/trinityrnaseq/wiki
 
 Download and Install Trinity v2.2.0 using github. ::
 
-    cd $HOME/fGAP/tools
+    cd $HOME/fGAP/external
     git clone https://github.com/trinityrnaseq/trinityrnaseq.git
     cd trinityrnaseq
     make
@@ -61,10 +61,9 @@ Maker2 installation
 ^^^^^^^^^^^^^^^^^^^
 
 Maker2 is an eay-to-use annotation pipeline designed for emerging model organism genomes.
-
 http://www.gmod.org/wiki/MAKER
 
-Install Maker v2.31.8. Please note that you need a proper license to use Maker2 (http://yandell.topaz.genetics.utah.edu/cgi-bin/maker_license.cgi). ::
+Please note that you need a proper license to use Maker2. ::
 
     # Move to install directory
     cd $HOME/fGAP/tools/
